@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greatest Number</title>
+  </head>
+  <body>
+    <h2>The greatest number from 10 inputs is :</h2>
+    <script>
+      function findGreatest() {
+        let greatest = Number.MIN_SAFE_INTEGER;
+        for (let i = 0; i < 10; i++) {
+          let num = parseInt(prompt("Enter a number:"));
+          if (num > greatest) {
+            greatest = num;
+          }
+        }
+        return greatest;
+      }
+
+      document.write(`The greatest number is: ${findGreatest()}`);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common Divisor</title>
+  </head>
+  <body>
+    <script>
+      function gcd(a, b, c) {
+        let min = Math.min(a, b, c);
+        for (let i = min; i >= 1; i--) {
+          if (a % i === 0 && b % i === 0 && c % i === 0) {
+            return i;
+          }
+        }
+      }
+
+      let a = parseInt(prompt("Enter first number:"));
+      let b = parseInt(prompt("Enter second number:"));
+      let c = parseInt(prompt("Enter third number:"));
+      document.write(`Greatest Common Divisor is: ${gcd(a, b, c)}`);
+    </script>
+  </body>
+</html>
